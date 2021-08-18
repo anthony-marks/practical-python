@@ -9,7 +9,7 @@ total_paid = 0.0
 # Extra payments ...
 extra_payment_start_month = 61
 extra_payment_end_month = 108
-extra_payment = 1000
+extra_payment = 21000
 
 month_count = 0
 special_payment = payment + extra_payment
@@ -28,7 +28,8 @@ while principal > 0:
 
     principal = principal - monthly_payment
     total_paid = total_paid + monthly_payment
-    print(month_count, round(total_paid, 2), round(principal, 2))
+    # print(month_count, round(total_paid, 2), round(principal, 2))
+    print(f'{month_count:>3d}\t{total_paid:10.2f}\t{principal:10.2f}')
 
 print('Total paid', round(total_paid, 2))
 print('Number of Months', month_count)
